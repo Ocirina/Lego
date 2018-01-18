@@ -1,6 +1,7 @@
 package be.tomcools.javaboost.vernie;
 
 import be.tomcools.javaboost.commands.GatttoolCommandWrapper;
+import be.tomcools.javaboost.commands.components.LedColor;
 import be.tomcools.javaboost.commands.components.Motor;
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.eventbus.Message;
@@ -52,7 +53,7 @@ public class VernieVerticle extends AbstractVerticle {
                     WRAPPER.motorAngleMulti(240, -100, 100);
                     break;
                 case "LED_RED":
-                    WRAPPER.led("9");
+                    WRAPPER.led(LedColor.RED);
                     break;
                 case "FIRE":
                     WRAPPER.motorAngle(Motor.C, 100, 100);

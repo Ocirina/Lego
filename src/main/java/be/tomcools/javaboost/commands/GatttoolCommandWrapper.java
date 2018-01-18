@@ -1,6 +1,7 @@
 package be.tomcools.javaboost.commands;
 
 import be.tomcools.javaboost.Config;
+import be.tomcools.javaboost.commands.components.LedColor;
 import be.tomcools.javaboost.commands.components.Motor;
 import io.vertx.core.logging.Logger;
 import io.vertx.core.logging.LoggerFactory;
@@ -33,8 +34,8 @@ public class GatttoolCommandWrapper {
         this.executeCommand(encoder.encodeMotorTimeMulti(miliseconds, dutyCycleA, dutyCycleB));
     }
 
-    public void led(String colour) {
-        this.executeCommand(encoder.changeLed(colour));
+    public void led(LedColor color) {
+        this.executeCommand(encoder.encodeLedColor(color));
     }
 
     public boolean isIsKeepingAlive() {

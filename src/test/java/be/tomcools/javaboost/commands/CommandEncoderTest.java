@@ -99,14 +99,14 @@ public class CommandEncoderTest {
     /*Led Color*/
     @Test
     public void led_yellow() {
-        String encodedText = sut.changeLed(LedColor.YELLOW);
+        String encodedText = sut.encodeLedColor(LedColor.YELLOW);
 
         assertEqual(encodedText,"0800813211510007");
     }
 
     @Test
     public void led_red() {
-        String encodedText = sut.changeLed(LedColor.RED);
+        String encodedText = sut.encodeLedColor(LedColor.RED);
 
         assertEqual(encodedText,"0800813211510009");
     }

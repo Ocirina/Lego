@@ -1,5 +1,6 @@
 package be.tomcools.javaboost.commands.components;
 
+//As documented on: https://github.com/JorgePe/BOOSTreveng/blob/master/RGB_LED.md
 public enum LedColor {
     OFF("0"),
     PINK("1"),

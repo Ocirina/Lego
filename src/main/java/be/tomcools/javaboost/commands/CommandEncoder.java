@@ -50,20 +50,10 @@ public class CommandEncoder {
     /**
      * Change the color of the led.
      *
-     * @param ledColor The color which will be sent to the LED.
-     * @return The formated command.
-     */
-    public String changeLed(String ledColor) {
-        return String.format("080081321151000%s", ledColor).toUpperCase();
-    }
-
-    /**
-     * Change the color of the led.
-     *
      * @param color The color which will be sent to the LED.
      * @return The formated command.
      */
-    public String changeLed(LedColor color) {
+    public String encodeLedColor(LedColor color) {
         return String.format("080081321151000%s", color.getCode()).toUpperCase();
     }
 
