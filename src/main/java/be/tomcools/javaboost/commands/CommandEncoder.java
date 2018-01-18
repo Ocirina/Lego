@@ -1,5 +1,7 @@
 package be.tomcools.javaboost.commands;
 
+import be.tomcools.javaboost.commands.components.Motor;
+
 import static be.tomcools.javaboost.commands.HexEncoder.toHex;
 import static be.tomcools.javaboost.commands.HexEncoder.toLittleEndian;
 

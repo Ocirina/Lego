@@ -1,5 +1,6 @@
 package be.tomcools.javaboost.commands;
 
+import be.tomcools.javaboost.commands.components.Motor;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;

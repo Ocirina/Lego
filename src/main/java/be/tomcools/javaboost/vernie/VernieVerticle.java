@@ -1,7 +1,7 @@
 package be.tomcools.javaboost.vernie;
 
 import be.tomcools.javaboost.commands.GatttoolCommandWrapper;
-import be.tomcools.javaboost.commands.Motor;
+import be.tomcools.javaboost.commands.components.Motor;
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.eventbus.Message;
 import io.vertx.core.logging.Logger;

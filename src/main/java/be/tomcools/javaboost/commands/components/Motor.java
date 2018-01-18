@@ -1,4 +1,4 @@
-package be.tomcools.javaboost.commands;
+package be.tomcools.javaboost.commands.components;
 
 public enum Motor {
 
