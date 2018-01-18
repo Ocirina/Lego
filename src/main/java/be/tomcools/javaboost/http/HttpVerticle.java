@@ -30,7 +30,7 @@ public class HttpVerticle extends AbstractVerticle {
 
         //fallback route
         router.route("/*").handler(r -> {
-            r.request().response().sendFile("\\web\\TEST.HTML.html");
+            r.request().response().sendFile("\\web\\index.html");
             //r.request().response().end("I'm Alive!");
         });
         vertx.createHttpServer()
