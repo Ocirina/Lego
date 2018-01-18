@@ -1,5 +1,6 @@
 package be.tomcools.javaboost.commands;
 
+import be.tomcools.javaboost.commands.components.LedColor;
 import be.tomcools.javaboost.commands.components.Motor;
 
 import static be.tomcools.javaboost.commands.HexEncoder.toHex;
@@ -49,11 +50,21 @@ public class CommandEncoder {
     /**
      * Change the color of the led.
      *
-     * @param ledColor The color which will be sended to the LED.
+     * @param ledColor The color which will be sent to the LED.
      * @return The formated command.
      */
     public String changeLed(String ledColor) {
         return String.format("080081321151000%s", ledColor).toUpperCase();
+    }
+
+    /**
+     * Change the color of the led.
+     *
+     * @param color The color which will be sent to the LED.
+     * @return The formated command.
+     */
+    public String changeLed(LedColor color) {
+        return String.format("080081321151000%s", color.getCode()).toUpperCase();
     }
 
     /**
@@ -93,4 +104,6 @@ public class CommandEncoder {
         }
         return toHex(intCycle, 1);
     }
+
+
 }

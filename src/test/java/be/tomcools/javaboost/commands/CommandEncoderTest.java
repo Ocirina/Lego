@@ -1,5 +1,6 @@
 package be.tomcools.javaboost.commands;
 
+import be.tomcools.javaboost.commands.components.LedColor;
 import be.tomcools.javaboost.commands.components.Motor;
 import org.junit.Test;
 
@@ -95,6 +96,20 @@ public class CommandEncoderTest {
         assertEqual(angle,"0d 00 81 39 11 0a e8 03 64 9b 64 7f 03");
     }
 
+    /*Led Color*/
+    @Test
+    public void led_yellow() {
+        String encodedText = sut.changeLed(LedColor.YELLOW);
+
+        assertEqual(encodedText,"0800813211510007");
+    }
+
+    @Test
+    public void led_red() {
+        String encodedText = sut.changeLed(LedColor.RED);
+
+        assertEqual(encodedText,"0800813211510009");
+    }
 
     private void assertEqual(String actual, String expected) {
         assertThat(actual,is(expected.replace(" ","").trim().toUpperCase()));
