@@ -71,11 +71,9 @@ public class GatttoolCommandWrapper {
         try {
             Runtime.getRuntime().exec(command);
             Thread.sleep(WAITINGTIME);
-        } catch (IOException e) {
+        } catch (IOException | InterruptedException e) {
             LOG.error("Failed to execute command: " + command, e);
             throw new RuntimeException(e);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
         }
     }
 }
