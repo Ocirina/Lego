@@ -7,6 +7,7 @@ import io.vertx.core.json.Json;
 import io.vertx.core.logging.Logger;
 import io.vertx.core.logging.LoggerFactory;
 import io.vertx.ext.web.Router;
+import io.vertx.ext.web.handler.StaticHandler;
 
 import static be.tomcools.javaboost.EventBusConstants.VERNIE;
 
@@ -29,10 +30,7 @@ public class HttpVerticle extends AbstractVerticle {
         configHandlingRoutes(router);
 
         //fallback route
-        router.route("/*").handler(r -> {
-            r.request().response().sendFile("\\web\\index.html");
-            //r.request().response().end("I'm Alive!");
-        });
+        router.route("/*").handler(StaticHandler.create().setWebRoot("web"));
         vertx.createHttpServer()
                 .requestHandler(router::accept)
                 .listen(8080);
