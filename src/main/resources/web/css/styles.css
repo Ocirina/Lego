@@ -1,4 +1,4 @@
-body{
+body {
     background-image: url("../img/Boost_back_pattern_blue.jpg");
     background-size: 950px 600px;
 }
@@ -9,65 +9,81 @@ body{
     grid-template-columns: 33% 33% 33%;
     padding: 10px;
 }
+
 .grid-item {
     text-align: center;
     margin: 10px;
     height: 200px;
 }
 
-.btn-warning{
+.btn-warning {
     width: 100%;
     height: 100%;
 }
 
-img{
+img {
     width: auto;
-    height:100%;
+    height: 100%;
 }
 
-.centerbox{
+.centerbox {
     margin: auto;
     width: 75%;
     padding: 10px;
 }
 
-html, body {margin: 0; height: 100%; overflow: hidden}
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden
+}
 
-.button-groep{
-    margin: auto;
+.button-groep {
     display: grid;
     grid-template-columns: 33% 33% 33%;
     padding: 10px;
-}
-.C{
-    text-align: center;
-    margin: 5px;
+    background-color: #f0ad4e;
+    border-radius: 4px;
 }
 
-.blue{
+.C {
+    text-align: center;
+    margin: 5px;
+
+}
+
+.blue {
     background-color: #0D47A1;
 }
-.lblue{
+
+.lblue {
     background-color: #4FC3F7;
 }
-.red{
+
+.red {
     background-color: #D50000;
 }
-.purple{
+
+.purple {
     background-color: #9C27B0;
 }
-.orange{
+
+.orange {
     background-color: #FF9800;
 }
-.cyan{
+
+.cyan {
     background-color: #00BCD4;
 }
-.off{
+
+.off {
     background-color: #78909C;
 }
-.yellow{
+
+.yellow {
     background-color: #FFEB3B;
 }
-.white{
+
+.white {
     background-color: #FFFFFF;
 }
