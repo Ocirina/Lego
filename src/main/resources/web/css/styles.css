@@ -30,3 +30,5 @@ img{
     width: 75%;
     padding: 10px;
 }
+
+html, body {margin: 0; height: 100%; overflow: hidden}
