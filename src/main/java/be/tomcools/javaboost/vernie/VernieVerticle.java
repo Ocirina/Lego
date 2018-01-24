@@ -25,7 +25,7 @@ public class VernieVerticle extends AbstractVerticle {
     private void executeCommand(Message<String> tMessage) {
         try {
             String command = tMessage.body();
-            String[] commands = command.split("/");
+            String[] commands = command.split("-");
             switch (commands[0]) {
                 case "FORWARD":
                     WRAPPER.motorAngle(Motor.AB, 360, 100);
