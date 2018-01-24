@@ -25,7 +25,8 @@ public class VernieVerticle extends AbstractVerticle {
     private void executeCommand(Message<String> tMessage) {
         try {
             String command = tMessage.body();
-            switch (command) {
+            String[] commands = command.split("/");
+            switch (commands[0]) {
                 case "FORWARD":
                     WRAPPER.motorAngle(Motor.AB, 360, 100);
                     break;
@@ -52,9 +53,11 @@ public class VernieVerticle extends AbstractVerticle {
                 case "PIVOT_LEFT":
                     WRAPPER.motorAngleMulti(240, -100, 100);
                     break;
-                case "LED_RED":
-                    WRAPPER.led(LedColor.RED);
-                    break;
+                case "LED":
+                    if(commands.length>1) {
+                        WRAPPER.led(LedColor.valueOf(commands[1]));
+                        break;
+                    }
                 case "FIRE":
                     WRAPPER.motorAngle(Motor.C, 100, 100);
                     WRAPPER.motorAngle(Motor.C, 100, -100);
