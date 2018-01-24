@@ -32,3 +32,42 @@ img{
 }
 
 html, body {margin: 0; height: 100%; overflow: hidden}
+
+.button-groep{
+    margin: auto;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    padding: 10px;
+}
+.C{
+    text-align: center;
+    margin: 5px;
+}
+
+.blue{
+    background-color: #0D47A1;
+}
+.lblue{
+    background-color: #4FC3F7;
+}
+.red{
+    background-color: #D50000;
+}
+.purple{
+    background-color: #9C27B0;
+}
+.orange{
+    background-color: #FF9800;
+}
+.cyan{
+    background-color: #00BCD4;
+}
+.off{
+    background-color: #78909C;
+}
+.yellow{
+    background-color: #FFEB3B;
+}
+.white{
+    background-color: #FFFFFF;
+}
